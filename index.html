@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Pathshala</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', sans-serif;
+            background: linear-gradient(135deg, #4e73df, #1cc88a);
+            display: flex;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .app-container {
+            background: white;
+            width: 100%;
+            max-width: 420px;
+            border-radius: 25px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+            padding: 20px;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 15px;
+        }
+
+        .header h2 {
+            margin: 5px 0;
+            color: #4e73df;
+        }
+
+        .card {
+            background: #f8f9fc;
+            padding: 15px;
+            border-radius: 15px;
+            margin-bottom: 15px;
+            box-shadow: 0 5px 10px rgba(0,0,0,0.05);
+        }
+
+        .card p {
+            margin: 8px 0;
+            font-size: 14px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 13px;
+        }
+
+        th {
+            background: #4e73df;
+            color: white;
+            padding: 8px;
+            border-radius: 5px;
+        }
+
+        td {
+            padding: 6px;
+        }
+
+        input {
+            width: 100%;
+            padding: 5px;
+            border-radius: 8px;
+            border: 1px solid #ddd;
+            font-size: 12px;
+        }
+
+        .print-btn {
+            width: 100%;
+            padding: 12px;
+            background: #1cc88a;
+            color: white;
+            border: none;
+            border-radius: 12px;
+            font-size: 16px;
+            margin-top: 10px;
+            cursor: pointer;
+        }
+
+        .print-btn:hover {
+            opacity: 0.9;
+        }
+
+        @media print {
+            body {
+                background: white;
+            }
+            .print-btn {
+                display: none;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="app-container">
+
+    <div class="header">
+        <h2>Digital Pathshala</h2>
+        <small>Katihar - Daily Homework App</small>
+    </div>
+
+    <div class="card">
+        <p><b>Day:</b> <span id="day"></span></p>
+        <p><b>Date:</b> <span id="date"></span></p>
+        <p><b>Week:</b> ____________</p>
+        <p><b>Class:</b> ____________</p>
+        <p><b>Teacher:</b> ____________</p>
+    </div>
+
+    <div class="card">
+        <table>
+            <tr>
+                <th>Period</th>
+                <th>Subject</th>
+                <th>Homework</th>
+            </tr>
+
+            <tr><td>1</td><td><input type="text"></td><td><input type="text"></td></tr>
+            <tr><td>2</td><td><input type="text"></td><td><input type="text"></td></tr>
+            <tr><td>3</td><td><input type="text"></td><td><input type="text"></td></tr>
+            <tr><td>4</td><td><input type="text"></td><td><input type="text"></td></tr>
+            <tr><td>5</td><td><input type="text"></td><td><input type="text"></td></tr>
+            <tr><td>6</td><td><input type="text"></td><td><input type="text"></td></tr>
+            <tr><td>7</td><td><input type="text"></td><td><input type="text"></td></tr>
+            <tr><td>8</td><td><input type="text"></td><td><input type="text"></td></tr>
+
+        </table>
+    </div>
+
+    <button class="print-btn" onclick="window.print()">Print Report</button>
+
+</div>
+
+<script>
+    const today = new Date();
+    document.getElementById("day").innerHTML =
+        today.toLocaleDateString('en-US', { weekday: 'long' });
+    document.getElementById("date").innerHTML =
+        today.toLocaleDateString();
+</script>
+
+</body>
+</html>
