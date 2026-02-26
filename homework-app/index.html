@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Homework Report App</title>
+</head>
+<body>
+    <h1>Homework Report</h1>
+    <form id="homeworkForm">
+        <label for="date">Date:</label>
+        <input type="date" id="date" name="date" required>
+        <label for="week">Week:</label>
+        <input type="text" id="week" name="week" required>
+        <label for="className">Class Name:</label>
+        <input type="text" id="className" name="className" required>
+        <label for="teacherName">Teacher Name:</label>
+        <input type="text" id="teacherName" name="teacherName" required>
+
+        <div id="periods">
+            <!-- Periods will be generated here -->
+        </div>
+        <button type="button" onclick="addPeriod()">Add Period</button>
+        <button type="button" onclick="printReport()">Print Report</button>
+    </form>
+    <script src="script.js"></script>
+</body>
+</html>
