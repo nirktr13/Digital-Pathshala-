@@ -1,0 +1,44 @@
+.homework-report {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+form input, form textarea {
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.period-section {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin: 10px 0;
+}
+
+.print-button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+}
+
+.print-button:hover {
+    background-color: #45a049;
+}
+
+@media (max-width: 600px) {
+    .homework-report {
+        margin: 10px;
+    }
+    form {
+        width: 100%;
+    }
+}
